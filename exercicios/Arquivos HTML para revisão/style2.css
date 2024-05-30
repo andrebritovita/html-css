@@ -1,0 +1,19 @@
+@charset "UTF8";
+
+.section-one {
+    background-color: deeppink;
+    padding: 5px;
+    color: white;
+    border: 5px solid blue;
+    margin: 5px;
+    width: 200px;
+    height: 200px;
+    background-image: url(https://lh3.googleusercontent.com/proxy/mMebLvk1I5R2l9JyaSCh6VxNToxyGwkEKtMQmK3iAam97fqZLegq0RYc4_bSMEwIb7RM2h1KXdSDsp-b3GHZubFcsiSX0Vnxlwuriy1qn8RutgPCN7HAx60x65E);
+    background-size: cover;
+    background-position: center center;
+    box-sizing: ;
+}
+
+.section-two {
+    background-color: cyan;
+}

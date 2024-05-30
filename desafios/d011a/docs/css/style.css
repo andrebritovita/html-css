@@ -1,0 +1,505 @@
+
+/*
+As configurações definidas no astericos serve para aplicar a mesma configuração em todos os elementos. 
+*/
+*{
+    padding: 0px;
+    /*
+    É bom que  definir que a margem de todos os elementos é 0 para que depois a gente possa estilizar individualmente as margens de cada elemento. 
+    */
+    margin: 0px;
+    /*
+    content-box: Tamanho do elemento é a SOMA do conteúdo + padding + border.
+    Border-box: Conteúdo + padding + border é igual ao tamanho que foi definido. 
+    No box-border, se eu defino que uma box terá 200px de largura, esse será o tamanho total da box, independente do conteúdo, padding e border. 
+    Exemplo no box-sizing: content-box: width: 200px, padding: 10px.
+    Tamanho total do elemento = 220px (200px de largura) + 10px de padding-left + 10px de padding-right. 
+    Exemplo no box-sizing: border-box: width: 200px, padding: 10px.
+    Tamanho total do elemento = 200px. Width + padding + border se adaptam para a box não ultrapassar 200px
+    */
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../img/background.jpg');
+    height: 100%;
+    width: 100%;
+    background-image: cover;
+    position: relative;
+    
+}
+
+body::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.382);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+header {
+    top: 0;
+    padding: 10px;
+}
+header img {
+    width: 150px;
+    /*
+    A propriedade CSS "objecti-fit" faz o seguinte. Eu defini que a imagem vai ter uma largura de 80px. Se não couber em 80px
+    o valor "contain" diz que essa imagem tem que caber em 80px. Ou seja, se a imagem não couber ela vai se ajustar na mesma proporção pra caber. 
+    Esse parÂmetro serve também para outros elementos que não seja uma imagem. 
+    */
+    object-fit: contain;
+}
+.container {
+    background-color: black;
+    max-width: 400px;
+    min-width: 280px;
+    min-height: 400px;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0px 50px 50px 50px;
+    margin: auto;
+    border-radius: 7px;
+    padding: 50px;
+    z-index: 2;
+}
+
+.login {
+    margin: auto;
+}
+
+.login h2 {
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+/*
+A tag <form> é utilizada para criar box de formulários em HTML. Dentro dessa tag, podemos colocar o atributo "action" que especifica a URL para a qual os dados do formulário serão enviados quando o formulário for sobumetido. 
+ Já o"input" é o espaço do formulário que precisamos criar para o usuário inserir as informações. No "input" tem também o parâmetro "placeholder" que serve para a gente digitar um mensagem informando para o usuário qual dado ele deve inserir naquela caixa do formulário.
+*/
+
+
+.box-input > input {
+    color: white;
+    background-color: #333333;
+    display: block;
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.box-input > a {
+    color: white;
+    background-color: #e50914;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+/*
+A tag <input> quando utilizada com o parâmetro "checkbox" cria uma caixa de seleção para clicar. 
+O parâmetro "label" é usada para associar um rótulo a um elemento, nesse caso, o elemento seria o "input". 
+Quando o usuário clica no rótulo, o elemento associado é automaticamente selecionado ou focado. Isso é mais fácil para o usuário interagir com o formulário, especialmente quando o elemento é pequeno ou difícil de clicar. 
+Configurar o atributo "for" da "label" com o mesmo valor do atributo "id" da "checkbox" associa as duas juntas. Dessa forma, quando o usuário clica na "label", a "checkbox" é ativada ou desativada como se o usuário tivesse clicado diretamente na "checkbox". 
+*/
+.remember > label {
+    color: white;
+    font-size: .8em;
+    margin: auto;
+}
+
+.help > a {
+    font-size: .8em;
+    text-decoration: none;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+footer {
+    font-size: .8em;
+}
+footer > p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.description_footer > a {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+Nesse código, meu "HTML" e "BODY" estão com apenas 238px de altura: "HTML: 
+
+"HTML: 
+
+<body>
+    <nav>
+        <img src="docs/img/netflixlogo.png" alt="logo" class="logo">
+        <img src="docs/img/Netflix-avatar-1.png" alt="avatar" class="avatar">
+    </nav>
+    <header>
+        <h1>La Casa de Papel</h1>
+        <div>
+            <button href="#">Assistir</button>
+            <button href="#">Minha Lista</button>
+        </div>
+        <p>Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu líder manipula a polícia para realizar um plano. Será o maior roubo da história, ou uma missão em vão?</p>
+    </header>
+</body>
+</html>
+
+CSS.STYLE: 
+
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;  
+}
+
+nav {
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+}
+
+.logo {
+    width: 80px;
+    object-fit: contain;
+    
+}
+
+.avatar {
+    width: 30px;
+    object-fit: contain;
+}
+
+header {
+    background-image: url('../img/image.gif');
+    background-position: center center;
+    object-fit: contain;
+    background-image: cover;
+    background-repeat: no-repeat;
+}
+
+header > h1 {
+    color: white;
+    width: 350px;
+    padding: 5px 5px 20px 10px;
+}
+
+header > div {
+    columns: 2;
+    margin-bottom: 10px;
+}
+
+header button {
+    width: 100px;
+    background-color: white;
+    margin: 0px 20px 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+}
+
+header > p {
+    color: white;
+    width: 400px;
+    text-align: justify;
+    margin-left: 10px;
+}"
+
+O que fiz de errado? Como corrigir?
+
+Meu "header" agora está assim: 
+
+header {
+    background-image: url('../img/image.gif');
+    background-position: center center;
+    object-fit: contain;
+    background-image: cover;
+    background-repeat: no-repeat;
+    height: 448px;
+}
+
+e o "body" assim: 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;  
+    height: 100%;
+}
+
+Porém, o HTML e BODY ainda não ocupam 100% da tela. Eles aparecem com apenas 518px. 
+
+
+
+
+
+
+
+O código está assim: 
+
+"HTML: 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="docs/img/4375011_logo_netflix_icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="docs/css/style.css">
+</head>
+<body>
+    <nav>
+        <img src="docs/img/netflixlogo.png" alt="logo" class="logo">
+        <img src="docs/img/Netflix-avatar-1.png" alt="avatar" class="avatar">
+    </nav>
+    <header>
+        <h1>La Casa de Papel</h1>
+        <div>
+            <button href="#">Assistir</button>
+            <button href="#">Minha Lista</button>
+        </div>
+        <p>Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu líder manipula a polícia para realizar um plano. Será o maior roubo da história, ou uma missão em vão?</p>
+    </header>
+<div></div>
+</body>
+</html>"
+
+"STYLE.CSS: 
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;  
+    height: 100%;
+}
+
+nav {
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: inherit;
+    background-position: top;
+}
+
+.logo {
+    width: 80px;
+    object-fit: contain;
+    
+}
+
+.avatar {
+    width: 30px;
+    object-fit: contain;
+}
+
+header {
+    background-image: url('../img/image.gif');
+    background-position: center center;
+    object-fit: contain;
+    background-position: center 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 448px;
+    background-attachment: fixed;
+}
+
+header > h1 {
+    color: white;
+    width: 350px;
+    padding: 5px 5px 20px 10px;
+}
+
+header > div {
+    columns: 2;
+    margin-bottom: 10px;
+}
+
+header button {
+    width: 100px;
+    background-color: white;
+    margin: 0px 20px 5px 10px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    outline: none;
+    border: none;
+}
+
+header > p {
+    color: white;
+    width: 400px;
+    text-align: justify;
+    margin-left: 10px;
+}"
+
+Porém, não funcionou. A imagem ainda não está aparecendo no <nav>. Eu queria que essa imagem aparecesse no <nav> e no <header> apenas. 
+
+
+Tenho o seguinte código: 
+
+HTML: 
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="docs/img/4375011_logo_netflix_icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="docs/css/style.css">
+</head>
+<body>
+    <div class="nav">
+        <img src="docs/img/netflixlogo.png" alt="logo" class="logo">
+        <img src="docs/img/Netflix-avatar-1.png" alt="avatar" class="avatar">
+    </div>
+    <header class="banner">
+        <div class="banner__contents">
+            <h1 class="banner__title">La Casa de Papel</h1>
+            <div class="banner__buttons">
+                <button href="#">Assistir</button>
+                <button href="#">Minha Lista</button>
+            </div>
+            <p>Oito ladrões se trancam com reféns na Casa da Moeda da Espanha. Seu líder manipula a polícia para realizar um plano. Será o maior roubo da história, ou uma missão em vão?</p>
+        </div>
+    </header>
+    <div></div>
+</body>
+</html>
+
+ESTILO (CSS): 
+
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;  
+    height: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.logo {
+    width: 80px;
+    object-fit: contain;
+    
+}
+
+.avatar {
+    width: 30px;
+    object-fit: contain;
+}
+
+.banner {
+    background-image: url('../img/background.jpg');
+    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 448px;
+}
+
+.banner__title {
+    color: white;
+    width: 350px;
+    padding: 5px 5px 20px 10px;
+}
+
+.banner__buttons {
+    width: 100px;
+    margin: 0px 20px 5px 10px;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+header button {
+    background-color: rgba(0, 0, 0, 0.385);
+    color: white;
+}
+
+header p {
+    color: white;
+    width: 400px;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+Porque nesse código, o conteúdo do "header" invadiu o conteúdo da "<div class="nav">"?

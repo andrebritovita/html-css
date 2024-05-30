@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+       
+       div {
+            height: 300px;
+            width: 700px;
+            background-color: rgb(236, 236, 236);
+            border: 2px solid black;
+            padding-left: 15px;
+        }
+       
+       body {
+            font: normal 1em Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .link2:hover {
+            background-color: yellow;
+        }
+
+        .link3 {
+            background-color: lightgreen;
+        }
+        
+        span > a {
+            display: none;
+        }
+
+        span:hover > a {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Personalizando um link</h1>
+        <p>Para aprender HTML5 e CSS3, acesso o
+            <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/15%20-Seletores%20personalizados.pdf" target="_blank">Github do Guanabara</a>
+        </p>
+        <p>Se quiser conhecer mais sobre os padrões, visite o site do
+            <a class="link2" href="https://www.w3.org/" target="_blank">
+                escritório do W3C no Brasil
+            </a>
+        </p>
+        <p>
+            Para acompanhar os cursos, acesse esse
+            <span class="oculto">link oculto
+            <a class="link3" href="https://www.cursoemvideo.com/" target="_blank"> curso em vídeo
+            </a>
+        </span>
+        </p>
+    </div>
+</body>
+</html>

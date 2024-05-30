@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+
+    <Style>
+        body {
+            background-color: grey;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: ;
+
+        /* O min-widht significa que o conteudo do "main" só vai diminuir até um tamanho mínimo de 280px. Se a tela for menor do que isso ele não diminui mais; 
+        O "max-width" significa que o tamanho máximo que o "main" vai ocupar, mesmo em uma tela gigante é 800px
+        Acima disso a imagem pernace normal e abaixo disso o conteúdo não se adapta mais. */
+            min-width: 280px;
+            max-width: 880px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </Style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores aliquid rerum aspernatur, ipsam velit, quos autem minima natus distinctio dolores libero porro! Consectetur libero, expedita hic suscipit numquam perferendis blanditiis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto tenetur, aspernatur illum numquam delectus aperiam dolor saepe veniam quos minus officia rerum laboriosam corrupti? Itaque suscipit eos iste quaerat eum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. A magnam natus quas minima suscipit veritatis neque laboriosam corrupti sapiente dicta! Quia quam cum nulla, voluptas nihil adipisci accusamus sed itaque.</p>
+        
+    <picture> 
+        /*Esse "max=width" quer dizer que quando a "viewport" chegar em 500px, ele vai carregar a imagem definida em 
+        "srcset'
+        <source media="(max-width: 500px)" srcset="imagens/irina-blok-pq.jpg">
+        <img src="imagens/irina-blok.jpg" alt="Irina Blok, criadora do Bugdroid">
+        */
+    </picture>
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat voluptate amet atque, nesciunt autem eos rerum, debitis at, obcaecati ut quos. Labore facilis qui exercitationem! Reprehenderit doloremque nobis vitae quia?Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo perferendis harum corporis, nulla sit dicta, totam magni doloremque voluptates quidem. Soluta temporibus cumque quod omnis eveniet dolor veniam! Itaque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut officiis, autem dicta nesciunt earum alias illum quia deleniti nihil? Corrupti pariatur animi beatae sed quasi soluta doloribus minus quia quam?</p>
+    </main>
+</body>
+</html>

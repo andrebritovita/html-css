@@ -1,0 +1,26 @@
+1 - Montar o site no Mockflow para desenhar o wireframe (layout)
+
+2 - Estabelecer a paleta de cores do site e escolher as fontes. 
+
+3 - Criar as pastas e subpastas onde estarão os arquivos HTML, CSS, JavaScript, imagens, fontes, etc
+
+4 - Criar e confugurar os links para os CSS. 
+
+5 - Transformar o Layout em caixas principais; 
+
+	Nessa etapa, o objetivo é definir no HTML a estrutura principal do site de acordo com o wireframe Web criado com Mockflow. Eu vou dizer aonde ficarão as caixas semânticas como 
+	Header, nav, main, footer, etc; 
+
+	Ao fazer no Mockflow cada elemento da página usando retângulos, fica mais fácil identificar onde as caixas serão criadas e em qual caixa cada conteúdo estará. Por exemplo: 
+	O primeiro retângulo que eu abri no Mockflow foi para criar o cabeçalho contendo o título do site e logo abaixo criei o segundo retângulo para criar o menu de navegação com 
+	os links. 
+	
+	Então eu sei que a primeira caixa será um <header> contendo o título principal <h1> e um parágrafo <p> e a segunda será um <nav> contendo os links <a>.
+
+	
+6 - Depois deve ser inserido todo o conteudo de texto no HTML;
+
+7 - Colocar todo o conteúdo de texto dentro das caixas básicas dos elementos (<h1>, <h2>, <h3>, <p>, <ul>, <li>, <a>, <img>, <ifram>e>, etc...). 
+
+8 - 
+
